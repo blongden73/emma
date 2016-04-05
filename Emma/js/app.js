@@ -1,4 +1,4 @@
-$.getJSON("fileList.json", function(json) {
+$.getJSON("json/fileList.json", function(json) {
 	console.log(json);	
 	var images = json;
 	var source   = $("#images-template").html();

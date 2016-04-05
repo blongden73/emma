@@ -18,6 +18,15 @@ module.exports = function(grunt) {
     		},
 			src: 'images',
 			dest: '/images'
+  			},
+  			json:{
+  				auth: {
+				host: '160.153.162.21',
+				port: 21,
+				authKey: 'key1'
+    		},
+			src: 'json',
+			dest: '/json'
   			}
 		},
 		

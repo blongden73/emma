@@ -1,6 +1,6 @@
 var fs = require('fs');
 var jsonfile = require('jsonfile')
-var file = 'fileList.json'
+var file = 'json/fileList.json'
 var images = {
 	imageLink:[]
 };
