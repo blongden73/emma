@@ -27,7 +27,8 @@ time, mark, audio, video {
 
 body {
   line-height: 1;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -90,10 +91,27 @@ input, select {
 .logo {
   position: absolute;
   z-index: 99999999;
-  left: 20px;
-  top: 10px; }
+  left: 100px;
+  top: 100px; }
   .logo svg {
     width: 280px; }
+
+.details {
+  position: absolute;
+  z-index: 99999999;
+  left: 105px;
+  top: 150px; }
+  .details span {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 300; }
+    .details span:first-child {
+      margin-left: 0px; }
+    .details span a {
+      color: black;
+      text-decoration: none; }
+      .details span a:hover {
+        font-weight: 400; }
 
 .images__wrapper {
   position: relative; }
