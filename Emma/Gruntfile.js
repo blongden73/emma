@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		'ftp-deploy': {
 			build: {
 				auth: {
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 			dest: '/json'
   			}
 		},
-		
+
 		execute: {
 	        target: {
 	            src: [
@@ -43,14 +43,15 @@ module.exports = function(grunt) {
 				files: '**/*.scss',
 				tasks: ['sass']
 			}
-			
+
 		}
-            			
+
 	});
 	grunt.loadNpmTasks('grunt-ftp-deploy');
 	grunt.loadNpmTasks('grunt-execute');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['execute', 'sass', 'ftp-deploy', 'watch']);
+	grunt.registerTask('default',['execute', 'sass', 'watch']);
+	grunt.registerTask('deploy',['execute', 'sass', 'ftp-deploy']);
 }
