@@ -44,7 +44,15 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			}
 
-		}
+		},
+
+		connect: {
+    server: {
+      options: {
+        port: 8000
+      }
+    }
+  }
 
 	});
 	grunt.loadNpmTasks('grunt-ftp-deploy');
@@ -52,6 +60,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['execute', 'sass', 'watch']);
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.registerTask('default',['execute', 'sass', 'connect', 'watch']);
 	grunt.registerTask('deploy',['execute', 'sass', 'ftp-deploy']);
 }

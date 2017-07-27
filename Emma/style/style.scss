@@ -1,8 +1,8 @@
-/* 
+/*
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
+Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
@@ -15,7 +15,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -34,7 +34,7 @@ body {
 }
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
@@ -70,7 +70,7 @@ ins {
 /* change colours to suit your needs */
 mark {
     background-color:#ff9;
-    color:#000; 
+    color:#000;
     font-style:italic;
     font-weight:bold;
 }
@@ -93,7 +93,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:0;
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
@@ -108,8 +108,8 @@ input, select {
 	z-index: 99999999;
 	left: 100px;
 	top:100px;
-	
-	
+
+
 	svg{
 		width: 280px;
 	}
@@ -142,7 +142,7 @@ input, select {
 }
 .images__wrapper{
 	position: relative;
-	
+
 	.image{
 		position: absolute;
 		top:0;
@@ -155,24 +155,68 @@ input, select {
 		-moz-transition: all 1s ease-in-out;
 		-o-transition: all 1s ease-in-out;
 		transition: all 1s ease-in-out;
-		
+
 		img{
 			width: 100%;
 			height: auto;
 			display: block;
 		}
 	}
-	
+
 	.fadeIn{
 		opacity: 1;
 	}
 }
 
+.controls {
+  position: absolute;
+  margin: auto;
+  top: auto; left: 0; bottom: 40px; right: 0;
+  width: 66px;
+  height: 50px;
+  z-index: 10000;
+
+  .left {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .right {
+    float: left;
+  }
+
+  .left, .right {
+    cursor: pointer;
+    svg {
+      path {
+        fill: #000;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: blue;
+        }
+      }
+    }
+  }
+}
+
+
+.counter {
+  position: absolute;
+  bottom: 60px;
+  left: 100px;
+  z-index: 1000;
+}
+
+
 
 @media only screen
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
 	  .image{
 		 margin-left: -25vw;
 		 width: 125vw !important;
@@ -193,10 +237,10 @@ input, select {
 }
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 	.image{
 			 margin-left: -25vw;
 			 width: 125vw !important;
@@ -217,9 +261,9 @@ input, select {
 
 
 @media only screen
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 	  .image{
 		 margin-left: -25vw;
 		 width: 125vw !important;
